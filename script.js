@@ -21,7 +21,7 @@ let addMovie = (movie) => {
 let printMovies = () => {
     console.log("Printing all movies....");
     for(let i = 0; i < allMovies.length; i++) {
-        console.log(allMovies[i].title + ", rating of " + allMovies[i].rating + ", havewatched: " + allMovies[i].haveWatched);
+        console.log(allMovies.title + ", rating of " + allMovies.rating + ", havewatched: " + allMovies.haveWatched);
     }
     console.log("You have " + allMovies.length + " movies in total")
 }
