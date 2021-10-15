@@ -32,9 +32,9 @@ let printMovies = () => {
 let highRatings = (rating) => {
     console.log("printing movie that has a higher rating than " + rating);
     let matches = 0;
-    for(let i = 0; i < allMovies.length; i++){
-        if (allMovies[i].rating > rating) {
-            console.log(allMovies[i].title + " has a rating of " + allMovies[i].rating);
+    for(let matchMovie of allMovies) {
+        if (matchMovie.rating > rating) {
+            console.log(matchMovie.title + " has a rating of " + matchMovie.rating);
             matches++;
         } 
     }
@@ -45,12 +45,12 @@ let highRatings = (rating) => {
 //Toggle the 'haveWatched' property of the specified movie 
 let changeWatched = (title) => {
     console.log("changing the status of the movie...");
-    for(let i = 0; i < allMovies.length; i++) {
-        if(allMovies[i].title == title) {
-            if (allMovies[i].haveWatched == true) {
-                allMovies[i].haveWatched = false;
+    for(let changeWatch of allMovies) {
+        if(changeWatch.title == title) {
+            if (changeWatch.haveWatched == true) {
+                changeWatch.haveWatched = false;
             } else {
-                allMovies[i].haveWatched = true;
+                changeWatch.haveWatched = true;
             }
         }
     }
